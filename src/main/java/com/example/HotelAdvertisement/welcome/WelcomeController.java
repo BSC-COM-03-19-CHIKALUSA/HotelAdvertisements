@@ -9,19 +9,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="api/v1/welcome")
-public class WelcomeController {
+public class WelcomeController{
+    public final WelcomeService welcomeService;
+@Autowired
+    public WelcomeController(WelcomeService welcomeService) {
+        this.welcomeService = welcomeService;
+    }
     @GetMapping
     public List<Welcome> getWelcome(){
-        return List.of(
-                new Welcome(
-                        1,
-                        "Joseph",
-                        "Joseph@gmail.com",
-                        01234567,
-                        2500,
-                        3500
-                )
-        );
+        return welcomeService.getWelcome();
 
     }
 }
