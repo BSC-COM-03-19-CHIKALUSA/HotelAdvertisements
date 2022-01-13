@@ -22,18 +22,4 @@ public class Welcome {
     private long contact_number;
     private int room_price;
     private int total_bill;
-
-
-
-//    public Welcome(String name,
-//                   String email,
-//                   long contact_number,
-//                   int room_price,
-//                   int total_bill) {
-//        this.name = name;
-//        this.email = email;
-//        this.contact_number = contact_number;
-//        this.room_price = room_price;
-//        this.total_bill = total_bill;
-//    }
 }
