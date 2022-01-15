@@ -23,5 +23,16 @@ public class WelcomeController{
     public void theNewWelcome(@RequestBody Welcome welcome){
        welcomeService.addNewWelcome(welcome);
     }
+    @DeleteMapping(path="{customerId}")
+    public void deleteWelcome(@PathVariable("customerId")int customerId){
+    welcomeService.deleteWelcome(customerId);
+    }
+@PutMapping(path = "{customerId}")
+    public void updateWelcome(
+            @PathVariable("customerId") int customerId,
+            @RequestParam(required = false)String name,
+            @RequestParam(required = false)String email){
+    welcomeService.updateWelcome(customerId,name,email);
+    }
 
 }
